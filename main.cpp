@@ -1,5 +1,5 @@
 #include <iostream>
-#include "TemplateStack.h"
+#include "TemplateStack.cpp"
 
 using namespace std;
 

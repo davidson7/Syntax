@@ -10,7 +10,7 @@ public:
   ~TemplateStack(); //deconstructor
 
   void push(char def);
-  char pop();
+  char pop(); 
   char peek(); //aka top
 
   bool isFull();
