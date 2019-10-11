@@ -3,6 +3,32 @@
 
 using namespace std;
 
+template <template T>
+class TemplateStack{
+public:
+  TemplateStack(); //constructor
+  TemplateStack(int maxSize); //overloaded constructor
+  ~TemplateStack(); //deconstructor
+
+  void push(T const&);
+  char pop();
+  char peek(); //aka top
+
+  bool isFull();
+  bool isEmpty();
+
+  //should be private? can be, idk if it matters
+  int size;
+  int top;
+
+  char *myArray; //memory address for 'dynamic' size
+
+};
+
+
+
+
+
 TemplateStack::TemplateStack()//default constructor
 {
 //initialize default values, just choose something
