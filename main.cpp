@@ -16,4 +16,27 @@ int main{
 
   */
 
+//file io
+cout << "File Name:"<< endl;
+
+
+
+//read every char for brackets
+if('{'||'['||'('){
+
+}
+//if isFull - automatically allocate more room
+if(){
+
+}
+
+//if isEmpty - throw line error
+if(){
+  
+}
+
+
+
+
+
 };
