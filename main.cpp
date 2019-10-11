@@ -32,6 +32,7 @@ if(){
 
 //if isEmpty - throw line error
 if(){
+
   
 }
 
