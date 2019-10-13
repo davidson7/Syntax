@@ -2,7 +2,7 @@
 #include <fstream>
 #include <sstream>
 #include <string>
-#include "TemplateStack.cpp"
+#include "TemplateStack.h"
 
 using namespace std;
 
