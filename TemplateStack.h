@@ -83,6 +83,7 @@ T TemplateStack<T>::peek()
   if(top==-1){
     //throw exception
     cout<< "Stack is empty";
+    
   }
   return myArray[top];
 }
