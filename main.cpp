@@ -76,7 +76,7 @@ if(ch=='}'||ch==']'||ch==')'){
 //if isEmpty - throw line error
   if(stack.isEmpty()){
     cout<<"Line "<<linecount<<": Unexpected closing bracket"<<endl;
-    break;
+    exit(0);
   }
   //else compare to .top bracket, if match, pop top
   if(ch=='}'&& stack.peek()=='{'){
@@ -112,6 +112,7 @@ if(!stack.isEmpty()){
   }else if(stack.peek() == '['){
     cout<<']'<<endl;
   }
+  exit(0);
 }
 
 
