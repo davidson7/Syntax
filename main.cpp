@@ -57,8 +57,12 @@ for(char& ch : line){
 
 //if isFull - automatically allocate more room
 if(stack.isFull()){
-  cout<<"it's full"<<endl;
-  exit(0);
+  cout<<"Stack is full, allocating more space"<<endl;
+  TemplateStack<char> stack2(stack.getSize()*2);
+  for(int i =0;i<stack.getSize();++i){
+    stack2.push(stack.pop());
+  }
+  stack = stack2;
 
 }
 
