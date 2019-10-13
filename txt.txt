@@ -1,0 +1,24 @@
+
+using namespace std;
+
+template <class T>
+class TemplateStack{
+public:
+  TemplateStack(); //constructor
+  TemplateStack(int maxSize); //overloaded constructor
+  ~TemplateStack(); //deconstructor
+
+  void push(T const&);
+  T pop();
+  T peek(); //aka top
+
+  bool isFull();
+  bool isEmpty();
+
+  //should be private? can be, idk if it matters
+  int size;
+  int top;
+private:
+  T *myArray; //memory address for 'dynamic' size
+
+};
