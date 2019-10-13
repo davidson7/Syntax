@@ -16,6 +16,8 @@ public:
   bool isFull();
   bool isEmpty();
 
+  int getSize();
+
   //should be private? can be, idk if it matters
   int size;
   int top;
@@ -91,4 +93,10 @@ template <class T>
 bool TemplateStack<T>::isEmpty()
 {
   return (top==-1);
+}
+
+template <class T>
+int TemplateStack<T>::getSize()
+{
+  return size;
 }
