@@ -1,4 +1,6 @@
 #include <iostream>
+#include <fstream>
+#include <sstream>
 #include "TemplateStack.cpp"
 
 using namespace std;
@@ -17,7 +19,17 @@ int main{
   */
 
 //file io
-cout << "File Name:"<< endl;
+ifstream inStream;
+cout<<"What is the path of the file?"<< endl;
+string filepath;
+cin>>filepath;
+inStream.open(filepath.c_str());
+
+//check if file can be opened
+if(inStream.fail()){
+  cout << "Opening input file failed. Make sure you entered the path correctly\n";
+  exit(1);
+}
 
 
 
@@ -33,7 +45,7 @@ if(){
 //if isEmpty - throw line error
 if(){
 
-  
+
 }
 
 
