@@ -59,7 +59,7 @@ void TemplateStack<T>::push(T const& elem)
   //check error/boundary check
   if(top>= size-1){
     //throw exception
-    throw "Stack is full";
+    cout<< "Stack is full";
   }
   myArray[++top]= elem;
 }
@@ -70,7 +70,7 @@ T TemplateStack<T>::pop()
   //error check if empty etc
   if(top==-1){
     //throw exception and exit gracefully . . .
-    throw "Stack is empty";
+    cout<< "Stack is empty";
 
   }
   return myArray[top--];
@@ -82,7 +82,7 @@ T TemplateStack<T>::peek()
   //error check
   if(top==-1){
     //throw exception
-    throw "Stack is empty";
+    cout<< "Stack is empty";
   }
   return myArray[top];
 }
