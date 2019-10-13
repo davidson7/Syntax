@@ -8,7 +8,8 @@ public:
   TemplateStack(int maxSize); //overloaded constructor
   ~TemplateStack(); //deconstructor
 
-  void push(T const&);
+  void push(T const&};
+
   T pop();
   T peek(); //aka top
 
