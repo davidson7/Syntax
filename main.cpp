@@ -7,6 +7,7 @@
 using namespace std;
 
 int main(int argc, char** argv){
+  bool runAgain=true;
 
   /*read each char
   if open bracket add to stack
@@ -17,9 +18,10 @@ int main(int argc, char** argv){
   at end of file, check if stack is empty
   if not, give error and quit exe
 
+  ask for second file
   */
 
-  //TODO allocate double room
+  //TODO: runAgain is having problems
 
 //use arg as filepath
 string filepath="";
@@ -27,8 +29,10 @@ if(argc>=2){
   filepath =argv[1];
 }
 
+//for mutliple files
+while(runAgain==true){
 //if no arg, file io
-if(argc<2){
+if(argc<2||runAgain==true){
 cout<<"What is the path of the file?"<< endl;
 cin>>filepath;
 }
@@ -56,7 +60,7 @@ for(char& ch : line){
 
 
 //if isFull - automatically allocate more room
-/*if(stack.isFull()){
+if(stack.isFull()){
   cout<<"Stack is full, allocating more space"<<endl;
   TemplateStack<char> stack2(stack.getSize()*2);
   for(int i =0;i<stack.getSize();++i){
@@ -64,7 +68,7 @@ for(char& ch : line){
   }
   stack = stack2;
 
-}*/
+}
 
 //if open bracket, push to stack
 if(ch=='{'||ch=='['||ch=='('){
@@ -115,6 +119,23 @@ if(!stack.isEmpty()){
   exit(0);
 }
 
+//error free, ask for another file
+char response;
+cout<<"No errors, try another file? (y/n)"<<endl;
+cin>>response;
 
+if(response=='y'||response =='Y'){
+  runAgain=true;
+}else if(response=='n'||response=='N'){
+  runAgain=false;
+  break;
+}else{
+  cout <<"Invalid input. Closing program."<<endl;
+  runAgain=false;
+  break;
+
+}
+
+}
 return 0;
 };
